@@ -1,14 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int a = 0;
-
-    while (a < 5)
+    int a, b;
+    a=10;
+    b=0;
+    while (b!=a)
     {
-        printf ("a is equal to %d\n", a);
-        a++;
+       printf("enter your guess: ");
+       scanf("%d", &b);
+        
+        
+        
     }
-    printf ("I've finished the loop and a is equal to %d\n", a);
+    printf ("well done");
 
     return (0);
 }
