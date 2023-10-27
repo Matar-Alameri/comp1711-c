@@ -4,12 +4,22 @@ typedef struct {
     char name [20];
     char student_id [11]; // Assuming 10 digits.
     unsigned mark;
-} student;
+} Student;
+int main();
+
+void studentinfo(Student a){
+    
+        printf("-------------\n");
+        printf("student name: %s\n", a.name);
+        printf("student id is: %s\n", a.student_id);
+        printf("Final Mark is: %u\n", a.mark);
+    
+}
 
 int main () {
     // Data generated using ChatGPT.
     int number_of_students = 10, i;
-    student students [] = {
+    Student students [] = {
         {"Alice Smith",    "64827593", 67},
         {"Bob Johnson",    "19374650", 89},
         {"Charlie Brown",  "82056914", 76},
@@ -21,12 +31,9 @@ int main () {
         {"Isaac Harris",   "61093745", 89},
         {"Jack White",     "92847501", 72},
     };
-    for (i = 0; i < number_of_students; i++) {
-        printf("-------------\n");
-        printf("Student name: %s\n", students[i].name);
-        printf("Student ID: %s\n", students[i].student_id);
-        printf("Final mark: %u\n", students[i].mark);
+    for (i = 0; i<number_of_students; i++){
+        studentinfo(students[i]);
     }
-    printf("-------------\n");
+
     return 0;
 }
